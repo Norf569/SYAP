@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./ArtistsGrid.css";
+import "./ArtistsGrid.adaptive.css";
 
 const ArtistsGrid: FC = () => {
   return (

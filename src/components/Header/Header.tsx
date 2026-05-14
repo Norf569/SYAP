@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import "./Header.adaptive.css";
 import AuthModal from "../AuthModal/AuthModal";
 
 export const Header = () => {

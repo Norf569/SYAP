@@ -1,4 +1,5 @@
 import "./ArtCard.css";
+import "./ArtCard.adaptive.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useCart } from "../../context/CartContext";

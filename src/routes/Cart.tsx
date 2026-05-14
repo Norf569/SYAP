@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext";
 import ArtCard from "../components/Catalogue/ArtCard";
 
 import "./Cart.css";
+import "./Cart.adaptive.css";
 
 const Cart = () => {
   const { cart, removeFromCart, total } = useCart();

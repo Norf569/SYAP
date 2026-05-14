@@ -1,0 +1,45 @@
+/* Art card — responsive (catalogue, cart, personal) */
+
+@media (max-width: 768px) {
+  .art-card__title {
+    font-size: 18px;
+  }
+
+  .art-card__author {
+    font-size: 16px;
+  }
+
+  .art-card__price,
+  .art-card__btn {
+    font-size: 20px;
+  }
+
+  .art-card__btn {
+    padding: 12px 28px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .art-card__title {
+    font-size: 16px;
+  }
+
+  .art-card__author {
+    font-size: 14px;
+  }
+
+  .art-card__price,
+  .art-card__btn {
+    font-size: 17px;
+  }
+
+  .art-card__btn {
+    padding: 10px 18px;
+  }
+
+  .art-card__title-row {
+    flex-wrap: wrap;
+  }
+}

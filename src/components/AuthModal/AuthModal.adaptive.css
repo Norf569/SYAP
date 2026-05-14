@@ -1,0 +1,21 @@
+/* Auth modal — responsive */
+
+@media (max-width: 480px) {
+  .auth-window {
+    width: calc(100vw - 24px);
+    max-width: 360px;
+    max-height: min(90vh, 560px);
+    overflow-y: auto;
+    padding: 28px 20px;
+    box-sizing: border-box;
+  }
+
+  .auth-title {
+    font-size: 22px;
+    padding-right: 28px;
+  }
+
+  .auth-btn {
+    margin-top: 8px;
+  }
+}

@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "./WeekSlider.css";
+import "./WeekSlider.adaptive.css";
 
 export const WeekSlider: FC = () => {
   return (

@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import CatalogueFilters from "./CatalogueFilters";
 import CatalogueGrid from "./CatalogueGrid";
 import "./Catalogue.css";
+import "./Catalogue.adaptive.css";
 
 const Catalogue = () => {
   const [search, setSearch] = useState("");

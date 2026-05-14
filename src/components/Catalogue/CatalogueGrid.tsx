@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import ArtCard from "./ArtCard";
 import "./CatalogueGrid.css";
+import "./CatalogueGrid.adaptive.css";
 
 interface Props {
   search: string;

@@ -1,7 +1,14 @@
 import { useState } from "react";
 import "./SettingsModal.css";
+import "./SettingsModal.adaptive.css";
 
-const SettingsModal = ({ close }: { close: () => void }) => {
+interface SettingsModalProps {
+  close: () => void;
+  /** Called after name/avatar are written to localStorage (e.g. refresh profile UI without a full page reload). */
+  onSaved?: () => void;
+}
+
+const SettingsModal = ({ close, onSaved }: SettingsModalProps) => {
   const [name, setName] = useState(localStorage.getItem("userName") || "");
   const [avatar, setAvatar] = useState(
     localStorage.getItem("userAvatar") || "/img/Grid 2.png"
@@ -16,8 +23,8 @@ const SettingsModal = ({ close }: { close: () => void }) => {
   const save = () => {
     localStorage.setItem("userName", name);
     localStorage.setItem("userAvatar", avatar);
+    onSaved?.();
     close();
-    window.location.reload();
   };
 
   return (

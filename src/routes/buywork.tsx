@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./buywork.css";
+import "./buywork.adaptive.css";
 
 const Buywork = () => {
   const { state } = useLocation();

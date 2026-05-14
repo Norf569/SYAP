@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AuthModal.css";
+import "./AuthModal.adaptive.css";
 
 const AuthModal = ({ close }: { close: () => void }) => {
   const [name, setName] = useState("");

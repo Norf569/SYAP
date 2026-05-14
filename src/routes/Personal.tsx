@@ -2,22 +2,25 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { useFavourites } from "../context/FavoritesContext";
 import ArtCard from "../components/Catalogue/ArtCard";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import SettingsModal from "../components/SettingsModal/SettingsModal";
 
 import "./personal.css";
+import "./personal.adaptive.css";
 
 const Personal = () => {
   const { favourites } = useFavourites();
   const [showSettings, setShowSettings] = useState(false);
+  const [profileRev, setProfileRev] = useState(0);
 
-  // Достаём данные пользователя
-  const userName = localStorage.getItem("userName") || "Guest";
-  const userEmail = localStorage.getItem("userEmail") || "No email";
-
-  // ВАЖНО: если аватар не выбран → ставим person.png
-  const userAvatar =
-    localStorage.getItem("userAvatar") || "/img/person.png";
+  const { userName, userEmail, userAvatar } = useMemo(
+    () => ({
+      userName: localStorage.getItem("userName") || "Guest",
+      userEmail: localStorage.getItem("userEmail") || "No email",
+      userAvatar: localStorage.getItem("userAvatar") || "/img/person.png",
+    }),
+    [profileRev]
+  );
 
   return (
     <>
@@ -115,7 +118,12 @@ const Personal = () => {
       <Footer />
 
       {/* SETTINGS MODAL */}
-      {showSettings && <SettingsModal close={() => setShowSettings(false)} />}
+      {showSettings && (
+        <SettingsModal
+          close={() => setShowSettings(false)}
+          onSaved={() => setProfileRev((n) => n + 1)}
+        />
+      )}
     </>
   );
 };

@@ -1,0 +1,38 @@
+/* Catalogue page hero — responsive */
+
+@media (max-width: 1200px) {
+  .catalogue__inner {
+    padding: 0 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogue__inner {
+    padding: 0 24px;
+  }
+
+  .catalogue__title {
+    font-size: 34px;
+    margin-top: 36px;
+  }
+
+  .catalogue__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .catalogue__inner {
+    padding: 0 16px;
+  }
+
+  .catalogue__title {
+    font-size: 26px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+  }
+
+  .catalogue__text {
+    margin-bottom: 22px;
+  }
+}

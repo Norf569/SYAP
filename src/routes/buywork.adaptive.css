@@ -1,0 +1,57 @@
+/* Buy work page — additional responsive */
+
+@media (max-width: 992px) {
+  .buywork {
+    padding: 40px 24px 64px;
+  }
+
+  .buywork__inner {
+    gap: 40px;
+  }
+
+  .buywork__title {
+    font-size: 32px;
+  }
+
+  .buywork__price {
+    font-size: 24px;
+  }
+
+  .buywork__author {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .buywork {
+    padding: 24px 16px 48px;
+  }
+
+  .buywork__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .buywork__image {
+    width: 100%;
+  }
+
+  .buywork__info {
+    padding-left: 16px;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+  }
+
+  .buywork__btn {
+    font-size: 19px;
+  }
+
+  .buywork__decor--red {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    left: -50px;
+  }
+}

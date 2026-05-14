@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./Promo.css";
+import "./Promo.adaptive.css";
 
 export const Promo: FC = () => {
   return (

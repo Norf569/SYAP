@@ -1,0 +1,50 @@
+/* Catalogue filters — responsive */
+
+@media (max-width: 900px) {
+  .filters__top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters__search-input {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .filters__range {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .filters__label,
+  .filters__search-btn,
+  .filters__select {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .filters {
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .filters__search-block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters__search-btn,
+  .filters__select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .filters__label,
+  .filters__search-input,
+  .filters__search-btn,
+  .filters__select {
+    font-size: 17px;
+  }
+}

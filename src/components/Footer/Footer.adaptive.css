@@ -1,0 +1,157 @@
+/* Footer — responsive: three sections stay one row; brand stacks above on small screens */
+
+@media (max-width: 1200px) {
+  .footer__inner {
+    padding: 0 32px;
+  }
+
+  .footer__title {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .footer__col--brand .footer__title {
+    font-size: 22px;
+  }
+
+  .footer__link {
+    font-size: 14px;
+  }
+
+  .footer__nav-grid {
+    column-gap: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 48px 0 36px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .footer__col--brand {
+    justify-self: center;
+  }
+
+  .footer__nav-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer__nav-grid .footer__col {
+    text-align: left;
+  }
+
+  .footer__list {
+    gap: 8px;
+  }
+
+  .footer__bottom {
+    padding: 0 24px;
+    gap: 28px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+
+  .footer__bottom::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer__bottom-link {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer__title {
+    font-size: clamp(13px, 3.2vw, 17px);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .footer__col--brand .footer__title {
+    font-size: clamp(18px, 4.5vw, 22px);
+  }
+
+  .footer__link {
+    font-size: clamp(11px, 2.6vw, 14px);
+    line-height: 1.35;
+  }
+
+  .footer__nav-grid {
+    column-gap: 12px;
+  }
+
+  .footer__list {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 36px 0 28px;
+  }
+
+  .footer__inner {
+    padding: 0 16px;
+    row-gap: 24px;
+  }
+
+  .footer__nav-grid {
+    column-gap: 10px;
+    /* If still tight, allow subtle horizontal scroll of the three columns */
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    padding-bottom: 4px;
+  }
+
+  .footer__nav-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer__nav-grid .footer__col {
+    min-width: 92px;
+  }
+
+  .footer__bottom {
+    margin-top: 24px;
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  .footer__bottom-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__inner {
+    padding: 0 12px;
+  }
+
+  .footer__nav-grid .footer__col {
+    min-width: 88px;
+  }
+
+  .footer__bottom {
+    gap: 16px;
+    padding: 0 12px;
+  }
+}

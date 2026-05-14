@@ -1,4 +1,8 @@
+import { useState, useEffect } from "react";
 import "./CatalogueFilters.css";
+import "./CatalogueFilters.adaptive.css";
+
+const PRICE_DEBOUNCE_MS = 300;
 
 interface Props {
   search: string;
@@ -22,6 +26,17 @@ const CatalogueFilters = ({
   priceRange,
   setPriceRange,
 }: Props) => {
+  const [localPrice, setLocalPrice] = useState(price);
+
+  useEffect(() => {
+    setLocalPrice(price);
+  }, [price]);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => setPrice(localPrice), PRICE_DEBOUNCE_MS);
+    return () => window.clearTimeout(id);
+  }, [localPrice, setPrice]);
+
   return (
     <div className="filters">
 
@@ -78,14 +93,14 @@ const CatalogueFilters = ({
 
       {/* Линия 2 — ползунок */}
       <div className="filters__bottom">
-        <label className="filters__label">Max price: {price}$</label>
+        <label className="filters__label">Max price: {localPrice}$</label>
 
         <input
           type="range"
           min={0}
           max={10000}
-          value={price}
-          onChange={(e) => setPrice(Number(e.target.value))}
+          value={localPrice}
+          onChange={(e) => setLocalPrice(Number(e.target.value))}
           className="filters__range"
         />
       </div>
