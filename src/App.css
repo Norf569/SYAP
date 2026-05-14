@@ -1,0 +1,161 @@
+/* ====== BASE APP STYLES ====== */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* ====== LIGHT THEME (DEFAULT) ====== */
+
+body {
+  background: #ffffff;
+  color: #000000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* HEADER */
+.header {
+  background: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* ====== DARK THEME ====== */
+
+body.dark {
+  background: #0f0f0f !important;
+  color: #ffffff !important;
+}
+
+body.dark .header {
+  background: #0f0f0f !important;
+  color: #ffffff !important;
+}
+
+body.dark .header__link,
+body.dark .header__logo {
+  color: #ffffff !important;
+}
+
+
+/* ====== REMOVE WHITE BACKGROUNDS THAT BLOCK DARK MODE ====== */
+
+.profile,
+.profile__inner,
+.personal,
+.favourites,
+.favourites__grid,
+.suggest,
+.suggest__grid,
+.profile__avatar,
+.profile__menu,
+.profile__item,
+.footer {
+  background: transparent !important;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* TEXT IN DARK MODE */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark a {
+  color: #ffffff !important;
+}
+
+
+/* ====== PROFILE BUTTONS IN DARK MODE ====== */
+
+body.dark .profile__item {
+  background: #1a1a1a !important;
+  border-color: #333 !important;
+  color: #ffffff !important;
+}
+
+body.dark .profile__icon img {
+  filter: brightness(0.8);
+}
+
+
+/* ====== ART CARDS IN DARK MODE ====== */
+
+body.dark .art-card {
+  background: #1a1a1a !important;
+  border-color: #333 !important;
+  color: #ffffff !important;
+}
+
+body.dark .art-card p,
+body.dark .art-card h3 {
+  color: #ffffff !important;
+}
+
+
+/* ====== MODALS IN DARK MODE ====== */
+
+body.dark .auth-window,
+body.dark .settings-window {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+/* ====== DARK MODE FOR MAIN PAGE ONLY ====== */
+
+/* Главная страница — убираем белый фон */
+.promo,
+.week,
+.artists,
+.footer,
+.main,
+.home {
+  background: transparent !important;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Тёмная тема — фон как у header */
+body.dark {
+  background: #0f0f0f !important;
+  color: #ffffff !important;
+}
+
+/* Тёмная тема — текст */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark a {
+  color: #ffffff !important;
+}

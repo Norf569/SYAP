@@ -1,0 +1,98 @@
+.artists__title {
+  font-size: 60px;
+  color: #303030;
+  margin-bottom: 80px;
+  margin-left: 150px;
+}
+
+.artists__container {
+  max-width: 106.25rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  padding-bottom: 150px;
+}
+
+.artists__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artists__grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 15rem 15rem 15rem 12rem 12rem;
+  grid-template-rows: 14rem 18rem 20rem;
+  gap: 1rem;
+  width: max-content;
+}
+
+.artists__item--1 {
+  grid-column: 1/1;
+  grid-row: 1/2;
+}
+
+.artists__item--2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.artists__item--3 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+
+.artists__item:nth-child(4) {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+
+.artists__item--5 {
+  grid-column: 6/4;
+  grid-row: 1/3;
+}
+
+.artists__item:nth-child(6) {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+.artists__item:nth-child(7) {
+  grid-column: 3/3;
+  grid-row: 3/4;
+}
+
+.artists__item:nth-child(8) {
+  grid-column: 1/3;
+  grid-row: 3/3;
+}
+
+.artists__text {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  color: #111;
+  font-size: 25px;
+  margin: 0;
+  font-family: "Laila-Light";
+}
+
+.artists__btn {
+  grid-column: 6/5;
+  grid-row: 3/4;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 56px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.artists__btn:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,50 @@
+.catalogue-cards {
+  max-width: 1635px;
+  margin: 5rem auto 5rem;
+}
+
+.catalogue-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 50px;
+  margin-bottom: 200px;
+}
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 22px;
+}
+
+.pagination__num {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.pagination__num:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.pagination__num.active {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.pagination__arrow {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.pagination__arrow:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}

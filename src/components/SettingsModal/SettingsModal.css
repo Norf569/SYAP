@@ -1,0 +1,92 @@
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.settings-window {
+  background: #fff;
+  width: 420px;
+  padding: 35px 40px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.settings-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.settings-label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.settings-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #dcdcdc;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.settings-avatars {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.settings-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: 0.25s;
+}
+
+.settings-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.settings-avatar.active {
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+.settings-save {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.settings-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}

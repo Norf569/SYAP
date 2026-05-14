@@ -1,0 +1,60 @@
+.header {
+  background-color: #1D1D1D;
+  color: #fff;
+  padding: 61px 0;
+  padding-left: 162px;
+  padding-right: 162px;
+}
+
+.header__container {
+  font-family: "RobotoFlex";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 48px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  transition: opacity 0.2s;
+}
+
+.header__link:hover {
+  opacity: 0.6;
+}
+
+.header__actions {
+  display: flex;
+  gap: 20px;
+}
+
+.header__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.header__icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.header__btn:hover .header__icon {
+  opacity: 0.6;
+}

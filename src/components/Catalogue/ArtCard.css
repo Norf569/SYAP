@@ -1,0 +1,140 @@
+.catalogue-cards {
+  max-width: 1635px;
+  margin: 5rem auto 5rem;
+}
+
+.catalogue-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.art-card {
+  transition: opacity 0.4s ease, transform 0.35s ease;
+}
+
+.art-card__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.art-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.art-card__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.art-card__title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+.art-card__icon {
+  font-size: 0.72rem;
+  line-height: 1;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.art-card__author {
+  font-size: 20px;
+  color: #acacac;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.art-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.art-card__price {
+  font-size: 24px;
+  color: #1f1f1f;
+  font-weight: 700;
+}
+
+.art-card__btn {
+  text-decoration: none;
+  border: none;
+  background: #1d1d1d;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 15px 45px;
+  white-space: nowrap;
+  transition: 
+    background 0.35s ease,
+    transform 0.25s ease,
+    box-shadow 0.35s ease;
+}
+
+.art-card__btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.icon-bounce {
+  animation: bounce 0.35s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-6px);
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.25); }
+  60%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.art-card__heart,
+.art-card__basket {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.art-card__heart--active {
+  opacity: 1;
+}
+
+.art-card--in-cart {
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+
+body.dark .art-card__heart {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 4px;
+  box-sizing: content-box;
+}
+body.dark .art-card__heart,
+body.dark .art-card__basket {
+  background: #ffffff;     
+  border-radius: 50%;       
+  width: 36px;                
+  height: 36px;
+  padding: 6px;              
+  box-sizing: border-box;
+  display: flex;             
+  align-items: center;
+  justify-content: center;
+}
+body.dark .art-card {
+  background: #1d1d1d;
+}

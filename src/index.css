@@ -1,0 +1,180 @@
+/* СБРОС БАЗЫ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ====== СВЕТЛАЯ ТЕМА ПО УМОЛЧАНИЮ ====== */
+
+body {
+  background: #ffffff;
+  color: #000000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Хэдер в светлой теме */
+.header {
+  background: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ====== ТЁМНАЯ ТЕМА ====== */
+
+body.dark {
+  background: #1D1D1D;
+  color: #ffffff;
+}
+
+/* Хэдер в тёмной теме */
+body.dark .header {
+  background: #1D1D1D;
+}
+
+/* Ссылки в хэдере */
+body.dark .header__logo,
+body.dark .header__link {
+  color: #ffffff;
+}
+
+/* ====== ГЛАВНАЯ СТРАНИЦА — ФОН КАК У HEADER ====== */
+
+/* убираем белый фон у секций, чтобы был виден фон body */
+.promo,
+.week,
+.artists,
+.footer,
+.main,
+.home {
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* текст в тёмной теме */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark a {
+  color: #ffffff;
+}
+
+
+/* ============================
+   ТЁМНАЯ ТЕМА — ПЛАВНЫЙ ПОДЪЁМ КАРТОЧКИ
+   ============================ */
+
+body.dark .art-card {
+  background: #1d1d1d;
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Плавный подъём + красная тень */
+body.dark .art-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255, 60, 60, 0.45);
+}
+
+
+body.dark .art-card h3 {
+  color: #ffffff !important;
+}
+
+body.dark .art-card p {
+  color: #c7c7c7 !important;
+}
+
+body.dark .art-card .art-card__price {
+  color: #ffffff !important;
+}
+
+body.dark .art-card button,
+body.dark .art-card .art-card__btn {
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  transition: 0.3s ease;
+}
+
+body.dark .art-card button:hover,
+body.dark .art-card .art-card__btn:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.catalogue-hero {
+  width: 100%;
+  padding: 80px 0 60px;
+  text-align: center;
+  background: transparent;
+}
+
+.catalogue-title {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.catalogue-subtitle {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #c7c7c7;
+}
+
+body.dark .catalogue-title {
+  color: #ffffff;
+}
+
+body.dark .catalogue-subtitle {
+  color: #c7c7c7;
+}
+
+body.dark .artists__btn,
+body.dark .footer__btn {
+  background: #2546FF !important;
+  border-color: #2546FF !important;
+  color: #ffffff !important;
+}
+
+
+
+body.dark .cart button,
+body.dark .cart .cart__btn,
+body.dark .cart .cart-item__btn,
+body.dark .cart .cart-summary__btn {
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  transition: 0.3s ease;
+}
+
+
+body.dark .cart button:hover,
+body.dark .cart .cart__btn:hover,
+body.dark .cart .cart-item__btn:hover,
+body.dark .cart .cart-summary__btn:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}

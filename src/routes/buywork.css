@@ -1,0 +1,174 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; color: #111; background: #fff; }
+
+.buywork {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+.buywork__decor {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.buywork__decor--red {
+    z-index: -1;
+  top: -60px;
+  left: -80px;
+  width: 260px;
+  height: 260px;
+  background: #d12026;
+  border-radius: 50%;
+}
+
+.buywork__decor--blue {
+  right: -60px;
+  top: 45%;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 260px solid #1a4cff;
+  transform: rotate(15deg);
+}
+
+
+.buywork__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+
+.buywork__gallery { position: relative; }
+
+.buywork__image {
+  width: 96%;
+
+}
+
+
+.buywork__info {
+  border-left: 2px solid #040404;   
+  border-bottom: 2px solid #040404; 
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
+
+
+.buywork__note {
+  font-size: 20px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+
+.buywork__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.buywork__title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.buywork__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d12026;
+}
+
+
+.buywork__author {
+  font-size: 22px;
+  margin: 10px 0 25px;
+}
+
+
+.buywork__description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+.buywork__specs {
+  color: #d12026;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.buywork__specs-list { list-style: none; }
+.buywork__specs-list li { margin: 3px 0; }
+
+
+.buywork__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.buywork__btn {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 23px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.buywork__btn--primary {
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+}
+.buywork__btn--primary:hover {
+  background: #d12026;
+  border-color: #d12026;
+}
+
+
+.buywork__btn--outline {
+  background: #fff;
+  color: #111;
+  border: 2px solid #1a4cff;
+}
+.buywork__btn--outline:hover {
+  background: #1a4cff;
+  color: #fff;
+}
+
+
+.buywork__digital {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-left: 3px solid #d12026;
+  font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .buywork__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+
+  .buywork__decor--blue { display: none; }
+}

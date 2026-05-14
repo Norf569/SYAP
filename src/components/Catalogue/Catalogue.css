@@ -1,0 +1,29 @@
+.catalogue {
+  position: relative;
+
+}
+
+.catalogue__inner {
+  max-width: 1920px;
+  padding: 0 150px;
+}
+
+.catalogue__title {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 48px;
+}
+
+.catalogue__text {
+  margin-bottom: 30px;
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+body.dark .catalogue__title,
+body.dark .catalogue__text,
+body.dark .catalogue-title,
+body.dark .catalogue-subtitle {
+  color: #C1C1C1 !important;
+}
+
